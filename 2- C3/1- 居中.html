@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>元素居中</title>
+    <style>
+        .box {
+            width: 500px;
+            height: 500px;
+            border: 1px dashed blue;
+        }
+
+        .childrenBox {
+            width: 300px;
+            height: 300px;
+            background-color: orange;
+        }
+
+        /* 方式一 */
+        /* .parent {
+            display: flex;
+        }
+
+        .children {
+            margin: auto;
+        } */
+
+        /* 方式二 */
+        /* .parent {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        } */
+
+        /* 方式三 */
+        /* .parent {
+            position: relative;
+        }
+
+        .children {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        } */
+
+        /* 方式四 */
+        /* .parent {
+            position: relative;
+        }
+
+        .children {
+            position: absolute;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+        } */
+    </style>
+</head>
+
+<body>
+    <div class="box parent">
+        <div class="childrenBox children">我是children</div>
+    </div>
+</body>
+
+</html>
