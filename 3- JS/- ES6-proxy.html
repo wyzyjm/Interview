@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /* 
+    Proxy: 
+        vue3中用来替换原本的 Object.defineProperty 来实现数据响应式
+        无需一层一层为每个属性添加 代理, 一次即可完成以上操作
+ */
+        const onWatch = (obj, getLogger, setBind) => {
+            let handle = {
+                get: (target, porperty, receiver) => {
+                    getLogger(target, porperty)
+                    return Reflect.get(target, property, receiver)
+                },
+                set: (target, property, vlaue, receiver) => {
+                    setBind(vlaue, property)
+                    return Reflect.set(target, property, vlaue)
+
+                }
+            }
+            return new Proxy(obj, handle)
+        }
+        let obj = { name: '小明' }
+        let p = onWatch(obj, (v, property) => {
+            console.log(`监听到属性${property}--->${v}`);
+        }, (target, property) => {
+            console.log(` ${property}--->${target[property]}`);
+        })
+        p.name = '小黑'
+        p.name
+    </script>
+</body>
+
+</html>
