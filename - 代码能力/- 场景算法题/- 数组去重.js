@@ -7,7 +7,9 @@
 // string[] 
 const strArray = ["Sunday", "Monday", "Tuesday", "Wednesday", "Sunday", "Monday"];
 
-strArray.reduce((total, pre, cur) => {
-    const isArray = Array.isArray(total)
-    return isArray ? total.concat(cur)
+const newArr = strArray.reduce((pre, cur) => {
+    // pre.push(cur) push返回数组的长度
+    console.log('cur', cur, pre.push(cur));
+    return pre.includes(cur) ? pre : pre.concat(cur)
 }, [])
+console.log('newArr', newArr);

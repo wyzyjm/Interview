@@ -6,3 +6,11 @@
 // Input: nums = [-1,2,1，-4]， target = 1
 // 输出:2
 // 解释:最接近目标的和是2。(-1 + 2 + 1 = 2)。
+
+function getTargetValue(arr, target) {
+    let total = 0
+
+
+
+    return total
+}
