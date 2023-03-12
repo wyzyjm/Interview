@@ -6,4 +6,4 @@ function splitArr(arr) {
     newArr = [arr.splice(0, 3), arr]
     return newArr
 }
-console.log('splitArr', splitArr(arr));
+console.log("splitArr", splitArr(arr))
