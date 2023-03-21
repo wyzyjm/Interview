@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>手写map</title>
+	</head>
+	<body>
+		<script>
+			var arr = [1,3,4]
+			// var newArr = arr.map((item,index) =>{
+			// 	return item * index
+			// })
+			// console.log(newArr)
+			function map (arr,callBack){
+				if(!Array.isArray(arr) || !arr.length || typeof callBack !== 'function') return []
+				let res = []
+				for(let i=0;i<arr.length; i++){
+					res.push(callBack(arr[i],i,arr))
+				}
+				return res 
+			}
+			console.log(map(arr,function(item,index){
+				return item * index
+			}))
+		</script>
+	</body>
+</html>

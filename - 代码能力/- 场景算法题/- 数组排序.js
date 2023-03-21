@@ -6,7 +6,7 @@ function arrSort(arr) {
     let newArr = arr
     for (let i = 0; i < arr.length; i++) {
         for (let j = i; j < arr.length; j++) {
-            const stemp = arr[i];
+            const stemp = arr[i]
             if (arr[j] > arr[i]) {
                 arr[i] = arr[j]
                 arr[j] = stemp
@@ -15,4 +15,4 @@ function arrSort(arr) {
     }
     return newArr
 }
-console.log(arrSort(arr));
+console.log(arrSort(arr))
