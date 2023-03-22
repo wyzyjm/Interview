@@ -21,4 +21,4 @@ const selfMap = function (callBack, thisArg) {
 Array.prototype.selfMap = selfMap
 
 const res = arr.selfMap(item => item + 1)
-console.log('res', res);
+console.log("res", res)

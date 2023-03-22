@@ -1,4 +1,4 @@
-const names = ['Alice', 'Bob', 'Tiff', 'Bruce', 'Alice']
+const names = ["Alice", "Bob", "Tiff", "Bruce", "Alice"]
 
 const note = names.reduce((pre, cur, index, names) => {
     if (cur in pre) {
@@ -8,4 +8,4 @@ const note = names.reduce((pre, cur, index, names) => {
     }
     return pre
 }, {})
-console.log('所有元素次数', note);
+console.log("所有元素次数", note)
