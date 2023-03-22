@@ -31,6 +31,7 @@
 -   git clone `代码仓库地址`
 -   git pull 录取最新
 -   git merge `branch`
+-   git rebase main
 
 -   git status
 -   git add .

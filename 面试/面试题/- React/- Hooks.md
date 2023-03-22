@@ -12,3 +12,21 @@
     -   useMemo: 返回一个值,依赖不变 不会冲执行.这些 hooks 函数也 进一步提升了网站性能.
     -   useContext: 可以用于某一个模块间的传值.
     -   useRef: 用来获取组件实例.
+
+```tsx
+import { useState, useEffect } from "react"
+
+function component(props) {
+    const [count, setCount] = useState(0)
+
+    useEffect(() => {
+        const timer = setInterval(() => {
+            setCount(count + 1)
+        }, 1000)
+
+        return () => {
+            clearInterval(timer)
+        }
+    }, [])
+}
+```
