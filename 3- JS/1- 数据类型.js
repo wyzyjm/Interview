@@ -1,0 +1,13 @@
+/* 
+    基本数据类型:
+        number
+        string
+        boolean
+        null
+        undefined
+    复杂数据类型:
+        Object
+        Array
+        Set
+        Map
+ */
