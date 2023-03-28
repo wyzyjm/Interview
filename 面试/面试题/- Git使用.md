@@ -44,16 +44,27 @@
     - `git checkout -b newbranch` 切换新分支
     - ... 工作区 -> 暂存区 -> 本地仓库
 
+3. 分支合并
+
     - git merge `分支main`
+        - 在哪个分支就以哪个分支为基准.
+        - 留下一条 merge 记录
     - git rebase `变基 `
+
+        - 要合并哪个分支 为基准.
+        - 每次合并都需要解决冲突
 
     - git push 推送到远程仓库
 
-3. 版本回退
+4. 版本回退
 
-    - git log : 查看提交记录
-    - git reset --hard : 版本回退
+-   `工作区 暂存区 本地仓库 远程仓库`
 
-    - 留记录:
-        - `git revert head`
-    - `git checkout`
+    -   `git log` : 查看提交记录
+    -   `暂存区` : `git reset --soft 指定回滚到的版本号`
+    -   `工作区` : `git reset --mixed 指定回滚到的版本号`
+    -   `已经提交了`: `git reset --hard 指定回滚到的版本号 -> git push -f`
+
+    -   `git reset --hard 版本号` : 版本回退 毁尸灭迹的过程
+    -   `git revert 移除的版本号 ` : 保留原来, 生成新的记录
+        -   做过的修改会回到暂存区, 然后可以选择删除或修改后重新提交
